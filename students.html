@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Students</title>
+    <style>
+        :root {
+            --darkblue: #243d4b;
+            --orange: #ff7d2e;
+            --yellow: #f9c945;
+            --lightgreen: #9fc383;
+            --darkgreen: #10b981;
+
+            --dark: #818181;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: var(--darkgreen);
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #f1f1f1;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: var(--darkgreen);
+            color: var(--white);
+            padding: 5px 10px;
+            border: none;
+        }
+
+
+        #main {
+            transition: margin-left .5s;
+            padding: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Float four columns side by side */
+        .column {
+            float: left;
+            width: 33%;
+            padding: 0 5px;
+        }
+
+        .row {
+            margin: 0 -5px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive columns */
+        @media screen and (max-width: 600px) {
+            .column {
+                width: 100%;
+                display: block;
+                margin-bottom: 10px;
+            }
+        }
+
+
+        .card {
+            justify-content: center;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            background-color: var(--darkgreen);
+            color: white;
+            border-radius: 10px;
+        }
+
+        .card-fa {
+            font-size: 30px;
+        }
+
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            margin: auto 20px;
+        }
+
+        .card-content h3,
+        .card-content p {
+            margin: 3px;
+        }
+
+        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+        @media screen and (max-height: 450px) {
+            .sidebar {
+                padding-top: 15px;
+            }
+
+            .sidebar a {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="dashboard.html"><i class="fa fa-pie-chart"></i> Dashboard</a>
+        <a href="students.html"><i class='fa fa-users'></i> Students</a>
+    </div>
+
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">☰</button>
+        <h1 style="color: var(--darkgreen);" class="my-4 text-2xl"><i class="fa fa-empire"></i> Bharat
+            Futurist</h1>
+
+        <div class="w-full h-1 bg-green-500 rounded mx-auto border border-dashed border-2 border-green-500"></div>
+
+        <section class="text-gray-600 body-font">
+            <div class="container px-5 py-4 mx-auto flex flex-col">
+                <div class="lg:w-full mx-auto">
+
+                    <div class="flex flex-col sm:flex-row mt-2">
+                        <div class="sm:w-1/5">
+                            <div
+                                class="w-48 text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                                <a href=""
+                                    class="relative inline-flex items-center w-full px-4 py-2 text-sm font-medium border-b border-gray-200 rounded-t-lg hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white text-lg" style="color: var(--darkgreen);">
+                                    
+                                    Profile
+                                </button>
+                                <a href=""
+                                    class="relative inline-flex items-center w-full px-4 py-2 text-sm font-medium border-b border-gray-200 hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white text-lg" style="color: var(--darkgreen);">
+                                    
+                                    Settings
+                                </button>
+                                <a href=""
+                                    class="relative inline-flex items-center w-full px-4 py-2 text-sm font-medium border-b border-gray-200 hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white text-lg" style="color: var(--darkgreen);">
+                                    
+                                    Messages
+                                </button>
+                                <a href=""
+                                    class="relative inline-flex items-center w-full px-4 py-2 text-sm font-medium rounded-b-lg hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white text-lg" style="color: var(--darkgreen);">
+                                    
+                                    Download
+                                </button>
+                            </div>
+
+                        </div>
+                        <div
+                            class="sm:w-2/3">
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            function openNav() {
+                document.getElementById("mySidebar").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidebar").style.width = "0";
+                document.getElementById("main").style.marginLeft = "0";
+            }
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+</body>
+
+</html>
